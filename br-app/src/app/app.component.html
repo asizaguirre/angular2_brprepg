@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+</div>
+
+<!--<p-dialog header="Test" [(visible)]="display">
+Content
+</p-dialog>
+-->
+<li *ngFor="let user of users" [ngClass]="{completed: user.active}">
+  <div class="view">
+    <input class="toggle" type="checkbox" [checked]="user.active">
+    <label>{{user.nome}}</label>
+    <label>{{user.cargo}}</label>
+    <button>X</button>
+  </div>
+  <input class="edit" value="{{user.nome}}" />
+  <input class="edit" value="{{user.cargo}}" />
+</li>

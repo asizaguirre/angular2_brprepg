@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ChartModule, CalendarModule, SharedModule, PanelModule, DataTableModule, DialogModule } from 'primeng/primeng';
+
 
 @NgModule({
   declarations: [
@@ -11,10 +12,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    PanelModule,
     FormsModule,
-    HttpModule
+    DataTableModule,
+    DialogModule
   ],
-  providers: [],
+  exports:[DialogModule],
+  providers: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
